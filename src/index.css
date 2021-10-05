@@ -1,6 +1,6 @@
 /* color themes global variables */
 :root {
-  --main-bg-color: #fef7dc;
+  --main-bg-color: #fdf9e8;
   --second-bg-color: #c2b8a3;
   --card-bg-color: #c2b8a3;
   --card-select-color: rgb(220, 221, 203);
@@ -16,6 +16,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg-color);
 }
 
 /* scrollbar */
@@ -48,6 +49,7 @@ code {
   justify-content: center;
   align-items: center;
   background-color: var(--second-bg-color);
+  color: black;
 }
 
 @media (max-width: 600px) {
@@ -60,6 +62,7 @@ code {
     justify-content: center;
     align-items: center;
     background-color: var(--main-bg-color);
+    color: black;
   }
 }
 
@@ -70,7 +73,7 @@ code {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 600px;
+  height: 550px;
 
   overflow-y: scroll;
 }
@@ -81,7 +84,7 @@ code {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 550px;
+    height: 600px;
 
     overflow-y: scroll;
   }
@@ -176,12 +179,13 @@ code {
 }
 
 .modal-items {
-  width: 550px;
+  width: 460px;
   height: 700px;
   border: 3px solid var(--border-color);
   box-shadow: 24;
   background-color: var(--card-bg-color);
   overflow-x: hidden;
+  margin: auto;
 }
 @media (min-width: 600px) {
   .modal-items {
@@ -198,8 +202,8 @@ code {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding-top: 10px;
   background-color: var(--second-bg-color);
+  height: 100px;
 }
 
 @media (max-width: 500px) {
@@ -213,29 +217,58 @@ code {
 .modal-button {
   width: 250px !important;
   height: 80px !important;
-  margin-bottom: 10px !important;
 }
 
 @media (max-width: 600px) {
   .modal-button {
     width: 250px !important;
     height: 50px !important;
+    margin-bottom: 10px !important;
   }
 }
 
 .button-bg {
   margin-top: 5px !important;
-  margin-left: 0px !important;
-  width: 555px !important;
+  margin-bottom: 5px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 500px !important;
   height: 100px !important;
   background-color: var(--main-bg-color);
+}
+
+@media (min-width: 600px) {
+  .button-bg {
+    margin-top: 5px !important;
+    margin-left: 0px !important;
+    width: 500px !important;
+    height: 100px !important;
+    background-color: var(--main-bg-color);
+  }
 }
 
 .modal-add-button {
   margin-top: 10px !important;
   margin-left: 10px !important;
-  width: 400px !important;
+  width: 350px !important;
   height: 80px !important;
+}
+
+@media (min-width: 600px) {
+  .button-bg {
+    margin-top: 5px !important;
+    margin-left: 0px !important;
+    width: 555px !important;
+    height: 100px !important;
+    background-color: var(--main-bg-color);
+  }
+
+  .modal-add-button {
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+    width: 400px !important;
+    height: 80px !important;
+  }
 }
 
 .modal-back {
@@ -247,10 +280,21 @@ code {
 .item {
   padding-top: 10px;
   padding-left: 10px;
-  width: 500px;
+  width: 450px;
   height: 100px;
   border: 3px solid var(--border-color) !important;
   background-color: var(--card-bg-color) !important;
+}
+
+@media (min-width: 600px) {
+  .item {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 500px;
+    height: 100px;
+    border: 3px solid var(--border-color) !important;
+    background-color: var(--card-bg-color) !important;
+  }
 }
 
 .item-selected {
@@ -276,10 +320,20 @@ code {
 
 .item-name {
   padding-top: 20px;
-  width: 250px !important;
+  width: 200px !important;
   height: 50px;
   margin-top: 10px !important;
   margin-right: 10px !important;
+}
+
+@media (min-width: 600px) {
+  .item-name {
+    padding-top: 20px;
+    width: 250px !important;
+    height: 50px;
+    margin-top: 10px !important;
+    margin-right: 10px !important;
+  }
 }
 
 .item-check {
