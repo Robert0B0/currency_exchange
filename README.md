@@ -64,7 +64,7 @@ country flag ISO code, etc.
 **-Input **
 
 ```
-    The input component allows the selection of the primary currency card, complementary to the card select button.
+    The input component allows the selection of the primary currency card.
     The number input value is set to never reach zero or below or higher that 9999999.
 ```
 
