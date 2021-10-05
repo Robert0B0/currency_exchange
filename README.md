@@ -49,7 +49,8 @@ Each component has "Currency" at the start for differentiating with Material UI 
 
 The getData() function from CurrencyBuild is called to build the array of currency objects
 which will be used by all the apps components.
-It's set to build 30 currencies (for now) and holds proprieties such as rate, currency name, country flag ISO code, etc.
+It's set to build 30 currencies (for now) and holds proprieties such as rate, currency name, 
+country flag ISO code, etc.
 
 **-Currency Cards:**
 
