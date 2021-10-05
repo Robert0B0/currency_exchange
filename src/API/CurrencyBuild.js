@@ -2,7 +2,7 @@ const countryDataQuery = require("country-data-query");
 const { getISOByParam } = require("iso-country-currency");
 const moment = require("moment");
 
-const todayDate = moment(Date.now()).format("DD / MM / YYYY");
+const todayDate = moment(Date.now()).format("DD - MM - YYYY");
 
 const countries = [
   "Germany",
@@ -77,7 +77,7 @@ let testRates = {
 };
 
 const fetchCurrency = (currencies) => {
-  let payload = { rates: [], date: "" };
+  let payload = { rates: testRates, date: todayDate };
   const url = "http://api.exchangeratesapi.io/v1";
 
   const params = (paramsObj) => {
@@ -87,20 +87,17 @@ const fetchCurrency = (currencies) => {
     });
   };
 
-  const getLatest = (options) => {
-    fetch(`${url}/latest?${params(options)}`)
-      .then((response) => {
-        response.json().then((data) => {
-          payload.rates = data.rates;
-          payload.date = data.date;
-        });
-      })
-      .catch((err) => console.log(err));
-  };
+  async function getLatest(options) {
+    const response = await fetch(`${url}/latest?${params(options)}`);
+    const data = await response.json();
+    return data;
+  }
 
-  //getLatest({ symbols: currencies });
-  payload.rates = testRates;
-  payload.date = todayDate;
+  getLatest({ symbols: currencies }).then((data) => {
+    payload.rates = data.rates;
+    payload.date = data.date;
+  });
+
   return payload;
 };
 
